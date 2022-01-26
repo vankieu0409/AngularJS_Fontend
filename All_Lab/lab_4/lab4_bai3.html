@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="a" ng-controller="controller">
+        <table class="table table-condensed table-bordered">
+            <tr>
+                <th> Id</th>
+                <tH> HỌ tên</tH>
+                <tH> Ngày Sinh</tH>
+                <th> hình</th>
+            </tr>
+            <tr>
+                <td>{{students1[0].id}}</td>
+                <td>{{students1[0].name}}</td>
+                <td>{{students1[0].age}}</td>
+                <td><img src="{{students1[0].img}}" width="250px" height="150px"></td>
+
+            </tr>
+            <tr>
+                <td>{{students1[1].id}}</td>
+                <td>{{students1[1].name}}</td>
+                <td>{{students1[1].age}}</td>
+                <td><img src="{{students1[1].img}}" width="250px" height="150px"></td>
+
+            </tr>
+            <tr>
+                <td>{{students1[2].id}}</td>
+                <td>{{students1[2].name}}</td>
+                <td>{{students1[2].age}}</td>
+                <td><img src="{{students1[2].img}}" width="250px" height="150px"></td>
+
+            </tr>
+            <tr>
+                <td>{{students1[3].id}}</td>
+                <td>{{students1[3].name}}</td>
+                <td>{{students1[3].age}}</td>
+                <td><img src="{{students1[3].img}}" width="250px" height="150px"></td>
+
+            </tr>
+            <tr>
+                <td>{{students1[4].id}}</td>
+                <td>{{students1[4].name}}</td>
+                <td>{{students1[4].age}}</td>
+                <td><img src="{{students1[4].img}}" width="250px" height="150px"></td>
+
+            </tr>
+
+
+
+        </table>
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("controller", MainController);
+        function MainController($scope) {
+
+            $scope.students1 = [
+                { id: 1, name: "Bùi Tuấn Anh", age: 19, img: "data:image/jpeg;base64,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" },
+                { id: 2, name: "Nguyễn Thị Thanh Bình", age: 20, img: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTBneYl6JwFzt595bHbtqNZXe245KnECf3Keu5Dz4Gjmpn5fuUxIM5Tx_VgXHu6" },
+                { id: 3, name: "Đinh Phương Chi", age: 18, img: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTBneYl6JwFzt595bHbtqNZXe245KnECf3Keu5Dz4Gjmpn5fuUxIM5Tx_VgXHu6" },
+                { id: 4, name: "Hoàng Trần Bảo Chung", age: 19, img: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTBneYl6JwFzt595bHbtqNZXe245KnECf3Keu5Dz4Gjmpn5fuUxIM5Tx_VgXHu6" },
+                { id: 5, name: "Nguyễn Chí Công", age: 18, img: "http://t0.gstatic.com/licensed-image?q=tbn:ANd9GcTBneYl6JwFzt595bHbtqNZXe245KnECf3Keu5Dz4Gjmpn5fuUxIM5Tx_VgXHu6" },
+            ]
+        }
+    </script>
+</body>
+
+</html>

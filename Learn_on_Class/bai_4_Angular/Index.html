@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="myapp">
+    
+    <div ng-controller="homecontrl">
+        <!-- <h3>{{title}}</h3> -->
+        
+        <input type="text" ng-model="title" placeholder="điền vào trường nhập liệu">
+<!-- 
+        <div style="height: 50px; width: 50px; background-color:green; text-align: center; color:aliceblue;"
+         ng-mouseover="count = count + 1">
+        <span>{{count}}</span></div>-->
+        <div class="text">Phần hiển thị dữ liệu được nhập vào :   <p style="color:red">{{title}}</p></div>
+    </div> 
+    <script> 
+    
+        var app = angular.module('myapp',[]);
+        app.controller('homecontrl', HomeController);
+
+        function HomeController($scope) {
+            $scope.title;
+            //$scope.count = 0;
+            
+        }
+        
+    </script>    
+</body>
+</html>

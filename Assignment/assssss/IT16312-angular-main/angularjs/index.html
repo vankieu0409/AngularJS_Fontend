@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/29b41ee1c8.js" crossorigin="anonymous"></script>
+</head>
+<body ng-app="ngRoutingDemo">
+    <ul>
+        <li>
+            <a href="#do">Đỏ</a>
+        </li>
+        <li>
+            <a href="#xanh">Xanh</a>
+        </li>
+        <li>
+            <a href="#vang">Vàng</a>
+        </li>
+        <li>
+            <a href="#vang-nhat">Trang khác</a>
+        </li>
+    </ul>
+    <div ng-view>
+
+    </div>
+    
+    <script src="./public/core/angular.min.js"></script>
+    <script src="./public/core/angular-route.min.js"></script>
+    <script>
+        var app = angular.module('ngRoutingDemo', ['ngRoute']);
+
+        app.config(function ($routeProvider) {
+             
+            $routeProvider.when('/', {
+                templateUrl: 'screens/red.html',
+                // controller: 'loginController'
+            })
+            // .when('student/:username', {
+            .when('xanh', {
+                templateUrl: 'screens/green.html',
+                // controller: 'studentController'
+            })
+            .when('vang', {
+                templateUrl: 'screens/yellow.html',
+                // controller: 'studentController'
+            })
+            .otherwise({
+                redirectTo: "/"
+            });
+
+        });
+        app.controller("loginController", function ($scope, $location) {
+           
+           $scope.authenticate = function (username) {
+               // write authentication code here.. 
+
+               $location.path('/student/' + username)
+           };
+
+       });
+
+       app.controller("studentController", function ($scope, $routeParams) {
+           $scope.username = $routeParams.username;
+       });
+    </script>
+</body>
+</html>

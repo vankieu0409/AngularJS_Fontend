@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KieuNV_PH14806_Lab_2</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6 col-lg-4">
+                <div class="p-3" style="text-align: center; font-size: 25px; font-weight: bold; font-family:'arial';">
+                    KieuNV_PH14806<br>Lab_2/Fontend-Frameworks</div>
+            </div>
+        </div>
+        <div class="row bg-default">
+            <div class="col"></div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="container ">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1">
+                        Bài 1
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel1"> Bảng Lương</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <table class="table table-hover table-bordered">
+                                        <div class="row justify-content-center">
+                                            <thead class="table-secondary">
+                                                <tr>
+                                                    <th colspan="5">
+                                                        <i class="fa fa-list"></i> BẢNG LƯƠNG
+                                                        THÁNG
+                                                        12
+
+                                                    </th>
+                                                </tr>
+                                            </thead>
+                                            <thead style="text-align: center !important;
+                                            vertical-align: middle !important;
+                                            background-color:lightgoldenrodyellow;">
+
+                                                <tr class="table-waring">
+                                                    <th rowspan="2">Mã NV</th>
+                                                    <th rowspan="2">Họ và tên</th>
+                                                    <th colspan="3">Thu nhập</th>
+                                                </tr>
+                                                <tr class="table-waring">
+                                                    <th> Lương</th>
+                                                    <th> Thưởng</th>
+                                                    <th> Phụ cấp</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>NV100</td>
+                                                    <td>Nguyễn Công Phượng</td>
+                                                    <td>5000000</td>
+                                                    <td>500000</td>
+                                                    <td>0</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NV102</td>
+                                                    <td>Phan Văn Tài Em</td>
+                                                    <td>6000000</td>
+                                                    <td>600000</td>
+                                                    <td>100000</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>NV103</td>
+                                                    <td>Lê Huỳnh Đức</td>
+                                                    <td>7000000</td>
+                                                    <td>300000</td>
+                                                    <td>200000</td>
+                                                </tr>
+
+                                            </tbody>
+                                            <tfoot class="table-secondary">
+                                                <tr>
+                                                    <td colspan="5">
+                                                        Lương cầu thủ và huấn luyện viên chuyên nghiệp
+                                                    </td>
+                                                </tr>
+                                            </tfoot>
+
+                                        </div>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--                                                 Bài 2                                -->>
+            <div class="col">
+                <div class="container">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">
+                        Bài 2
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">
+                                            <div class="text" style="font-weight: bold;"><i class="far fa-edit"> </i>
+                                                NHẬP LƯƠNG THÁNG 12</div>
+                                        </div>
+
+                                        <div class="panel-body">
+                                            <form>
+                                                <div class="row p-4">
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Mã nhân viên</label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Họ và tên</label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Câu lạc bộ</label>
+                                                            <select class="form-control">
+                                                                <option value="">Bác Sê đô na</option>
+                                                                <option value="">Rê an man rít</option>
+                                                                <option value="">Chen Si</option>
+                                                            </select>
+
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Lương</label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Thưởng</label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                        <div class="form-group col-sm-6">
+                                                            <label>Phụ cấp</label>
+                                                            <input class="form-control" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="form-group col-sm-12">
+                                                            <label>Ghi chú</label>
+
+                                                            <textarea class="form-control" rows="3"></textarea>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row p-3">
+                                                    <div class="col-2">
+                                                        <button type="button" class="btn btn-light border"> <i
+                                                                class="far fa-save"> </i> Lưu </button>
+                                                    </div>
+                                                    <div class="col-10">
+                                                        <button type="button" class="btn btn-light border"><i
+                                                                class="fas fa-window-close"></i> Hủy </button>
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                            <div class="panel-footer">
+                                                Vui lòng nhập thông tin lương cầu thủ
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                </form>
+                            </div>
+                            <!-- <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <!--                                                 Bài 3                                -->>
+            <div class="col">
+                <div class="container">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal3">
+                        Bài 3
+                    </button>
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel3">Bài 3</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <nav>
+                                        <div class="nav nav-tabs" id="edit" role="tablist">
+                                            <button class="nav-link active" id="nav-home-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-home" type="button" role="tab"
+                                                aria-controls="nav-home" aria-selected="true">Cập nhật</button>
+                                            <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab"
+                                                data-bs-target="#nav-profile" type="button" role="tab"
+                                                aria-controls="nav-profile" aria-selected="false">Danh Sách</button>
+
+                                        </div>
+                                    </nav>
+                                    <!-- Tab Panes -->
+                                    <div class="tab-content" id="nav-tabContent">
+                                        <!--cập nhật-->
+                                        <div div class="tab-pane fade show active" id="nav-home" role="tabpanel"
+                                            aria-labelledby="nav-home-tab">
+                                            <div class="panel panel-default">
+                                                <div class="panel-heading">
+                                                    <div class="text" style="font-weight: bold;"><i class="far fa-edit">
+                                                        </i>
+                                                        NHẬP LƯƠNG THÁNG 12</div>
+                                                </div>
+
+                                                <div class="panel-body">
+                                                    <form>
+                                                        <div class="row p-4">
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Mã nhân viên</label>
+                                                                    <input class="form-control" />
+                                                                </div>
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Họ và tên</label>
+                                                                    <input class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Câu lạc bộ</label>
+                                                                    <select class="form-control">
+                                                                        <option value="">Bác Sê đô na</option>
+                                                                        <option value="">Rê an man rít</option>
+                                                                        <option value="">Chen Si</option>
+                                                                    </select>
+
+                                                                </div>
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Lương</label>
+                                                                    <input class="form-control" />
+                                                                </div>
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Thưởng</label>
+                                                                    <input class="form-control" />
+                                                                </div>
+                                                                <div class="form-group col-sm-6">
+                                                                    <label>Phụ cấp</label>
+                                                                    <input class="form-control" />
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="row">
+                                                                <div class="form-group col-sm-12">
+                                                                    <label>Ghi chú</label>
+
+                                                                    <textarea class="form-control" rows="3"></textarea>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row p-3">
+                                                            <div class="col-2">
+                                                                <button type="button" class="btn btn-light border"> <i
+                                                                        class="far fa-save"> </i> Lưu </button>
+                                                            </div>
+                                                            <div class="col-10">
+                                                                <button type="button" class="btn btn-light border"><i
+                                                                        class="fas fa-window-close"></i> Hủy </button>
+                                                            </div>
+                                                        </div>
+
+                                                    </form>
+
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!--List-->
+                                        <div class="tab-pane fade" id="nav-profile" role="tabpanel"
+                                            aria-labelledby="nav-profile-tab">
+                                            <div class="container">
+                                                <table class="table table-hover table-bordered">
+                                                    <div class="row justify-content-center">
+                                                        <thead class="table-secondary">
+                                                            <tr>
+                                                                <th colspan="5">
+                                                                    <i class="fa fa-list"></i> BẢNG LƯƠNG
+                                                                    THÁNG
+                                                                    12
+
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <thead style="text-align: center !important;
+                                                vertical-align: middle !important;
+                                                background-color:lightgoldenrodyellow;">
+
+                                                            <tr class="table-waring">
+                                                                <th rowspan="2">Mã NV</th>
+                                                                <th rowspan="2">Họ và tên</th>
+                                                                <th colspan="3">Thu nhập</th>
+                                                            </tr>
+                                                            <tr class="table-waring">
+                                                                <th> Lương</th>
+                                                                <th> Thưởng</th>
+                                                                <th> Phụ cấp</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td>NV100</td>
+                                                                <td>Nguyễn Công Phượng</td>
+                                                                <td>5000000</td>
+                                                                <td>500000</td>
+                                                                <td>0</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>NV102</td>
+                                                                <td>Phan Văn Tài Em</td>
+                                                                <td>6000000</td>
+                                                                <td>600000</td>
+                                                                <td>100000</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td>NV103</td>
+                                                                <td>Lê Huỳnh Đức</td>
+                                                                <td>7000000</td>
+                                                                <td>300000</td>
+                                                                <td>200000</td>
+                                                            </tr>
+
+                                                        </tbody>
+                                                        <tfoot class="table-secondary">
+                                                            <tr>
+                                                                <td colspan="5">
+                                                                    Lương cầu thủ và huấn luyện viên chuyên nghiệp
+                                                                </td>
+                                                            </tr>
+                                                        </tfoot>
+
+                                                    </div>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+    </div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--                                                 Bài 4                               -->>
+            <div class="col">
+                <div class="container">
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#bai4">
+                        Bài 4
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="bai4" tabindex="-1" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">NHẬP LƯƠNG THÁNG 12</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="container" style=" margin:3px">
+                                        <div class="row" >
+                                            <form>
+
+                                                <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <input class="form-control" placeholder="Mã Nhân Viên" />
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <input class="form-control" placeholder="Họ và tên" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-sm-6">
+                                                        <select class="form-control" placeholder="Câu lạc Bộ">
+                                                            <option value="">Bác Sê đô na</option>
+                                                            <option value="">Rê an man rít</option>
+                                                            <option value="">Chen Si</option>
+                                                        </select>
+
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+                                                        <input class="form-control" placeholder="Lương" />
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="form-group col-sm-6">
+
+                                                        <input class="form-control" placeholder="Thưởng" />
+                                                    </div>
+                                                    <div class="form-group col-sm-6">
+
+                                                        <input class="form-control" placeholder="Phụ cấp" />
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="form-group col-sm-12">
+                                                        <textarea class="form-control" rows="3"
+                                                            placeholder="GHi chú"></textarea>
+
+                                                    </div>
+                                                </div>
+
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+
+                                    <button type="button" class="btn btn-secondary"><i
+                                            class="far fa-save"></i>  Lưu</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"><i
+                                            class="fas fa-window-close"></i>  Hủy</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+            integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+            integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+            crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>

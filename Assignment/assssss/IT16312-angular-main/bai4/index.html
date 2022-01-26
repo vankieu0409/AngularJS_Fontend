@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <style>
+        .target{
+            height: 50px; 
+            width: 50px; 
+            background-color: green; 
+            text-align: center; 
+            color: #FFF;
+        }
+    </style>
+</head>
+<body ng-app="myapp">
+    <div ng-controller="homectrl">
+        <h3>{{title}}</h3>
+        <input type="text" ng-model="title">
+        <div class="target" ng-mouseover="count = count + 1">
+            <span>{{count}}</span>
+        </div>
+        <br>
+        <div>
+            <label for="">Số A</label>
+            <input ng-model="soA" type="number">
+        </div>
+        <div>
+            <label for="">Số B</label>
+            <input ng-model="soB" type="number" >
+        </div>
+        <div>
+            <button ng-click="tinhTong()">Tính tổng</button>
+            <input ng-model="soC" type="number">
+        </div>
+        <p>Họ và tên: {{info.name}}</p>
+    </div>
+    <script>
+
+        var app = angular.module("myapp", []);
+        app.controller("homectrl", HomeController)
+
+        function HomeController($scope){
+            $scope.title = "FPT Polytechnic - IT16312 - Angular Js";
+            $scope.info = {
+                name: 'thienth',
+                age: 30
+            };
+            $scope.soA = 0;
+            $scope.soB = 0;
+            $scope.soC = 0;
+            $scope.count = 0;
+            $scope.tinhTong = function(){
+                $scope.soC = $scope.soA + $scope.soB;
+            }
+        }   
+    </script>
+</body>
+</html>

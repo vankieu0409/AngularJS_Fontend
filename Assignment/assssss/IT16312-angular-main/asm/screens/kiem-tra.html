@@ -1,0 +1,9 @@
+<h3>Danh sách câu hỏi</h3>
+<div class="row">
+    <div class="col-6" ng-repeat="question in quizs">
+        <h3>{{question.Text}}</h3>
+        <ul>
+            <li ng-repeat="asw in question.Answers">{{asw.Text}}</li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myapp">
+    <div class="a" ng-controller="homecontrl">
+        <p>A: <input type="number" ng-model="a" placeholder="Nhập số A"> +
+            B: <input type="number" ng-model="b" placeholder="NHập số B">
+            <button ng-click="count()"> kết quả</button>
+
+            <input type="number" ng-model="c">
+        </p>
+
+    </div>
+
+    <div class="a" ng-controller="homecontrl">
+        <div>
+            <label for="">số A</label>
+            <input type="number" ng-model="a" placeholder="Nhập số A">
+        </div>
+
+
+        <div>
+            <label for="">số B</label>
+            <input type="number" ng-model="b" placeholder="Nhập số B">
+        </div>
+
+        <div>
+            <button ng-click="count()"> kết quả</button>
+            <input type="number" ng-model="c"></p>
+        </div>
+    </div>
+    <script>
+
+        var app = angular.module('myapp', []);
+        app.controller('homecontrl', HomeController);
+
+        function HomeController($scope) {
+            $scope.a;
+            $scope.b;
+            $scope.c;
+            $scope.count = function () {
+                $scope.c = $scope.a + $scope.b;
+            };
+        }
+    </script>
+</body>
+
+</html>
