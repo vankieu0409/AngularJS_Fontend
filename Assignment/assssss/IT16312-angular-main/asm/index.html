@@ -53,24 +53,19 @@
         </div>
 
         <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              {{ (student==null)?'Tài
-              khoản':student.fullname}}
-          </button>
+          <nav class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            {{ (student==null)?'Tài
+            khoản':student.fullname}}
+          </nav>
           <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
             <div ng-show="student==null">
-              <a ng-click="intro=0" class="dropdown-item" href="#">Đăng kí</a>
-              <a ng-click="intro=0" class="dropdown-item" href="#">Đăng nhập</a>
-              <a ng-click="intro=0" class="dropdown-item" href="#">Quên mật khẩu</a>
-            </div>
-            <div ng-hide="student==null">
-              <a ng-click="intro=1" class="dropdown-item" href="#!/updateaccount">Thông tin cá nhân</a>
-              <a ng-click="intro=1" class="dropdown-item" href="#!/changepassword">Đổi mật khẩu</a>
-              <a ng-click="intro=1;logoff()" class="dropdown-item" href="">Đăng xuất</a>
+              <a ng-click="intro=0" class="dropdown-item" href="#!/dang-ki">Đăng kí</a>
+              <a ng-click="intro=0" class="dropdown-item" href="#!/dang-nhap">Đăng nhập</a>
+              <a ng-click="intro=0" class="dropdown-item" href="#!/forgotpassword">Quên mật khẩu</a>
             </div>
           </div>
-      </div>
+        </div>
     </nav>
     <div ng-view></div>
   </div>
@@ -88,7 +83,7 @@
   <script src="lib/db/Subjects.js"></script>
   <script src="lib/db/Quizs/ADAV.js"></script> -->
   <script>
-    $(document).ready(function() {
+    $(document).ready(function () {
       $('#userClickDropdown').dropdown();
     })
   </script>
@@ -96,7 +91,7 @@
 
     var app = angular.module('asm1', ['ngRoute']);
     app.run(function ($rootScope, $http) {
-      $rootScope.student =null;
+      $rootScope.student = null;
       console.log(1);
     });
     app.config(function ($routeProvider) {
@@ -122,10 +117,10 @@
         //   templateUrl: "screens/login.html",
         //   controller: "LoginController"
         // })
-        .when("/dang-ki", {
-          templateUrl: "screens/register.html",
-          controller: "RegisterController"
-        })
+        // .when("/dang-ki", {
+        //   templateUrl: "screens/register.html",
+        //   controller: "RegisterController"
+        // })
         .when("/forgotpassword", {
           templateUrl: "screens/forgotpassword.html",
           controller: "ForgotPasswordController"
@@ -139,12 +134,43 @@
         })
     });
 
-    app.controller("HomeController", function ($scope) {
-      $scope.subjects = GlobalSubjects;
+    app.controller("HomeController", function ($scope, $http) {
+      $scope.subjects = [];
+      $http.get('./lib/db/Subjects.js')
+        .then(function (response) {
+          console.log(response);
+          if (response.statusText == "OK") {
+            $scope.subjects = response.data;
+          }
+        })
     });
-    app.controller("TestProcessController", function ($scope, $routeParams) {
+    app.controller("TestProcessController", function ($scope, $routeParams, $http) {
+      $scope.question = [];
+      $http.get('./lib/db/Quizs/${$routeParams.subjectId}.js')
+        .then(function (response) {
+          console.log(response);
+          if (response.statusText == "OK") {
+            // $scope.questions = response.data;
+            // console.log($scope.questions);
+            for (let index = 0; index < 10; index++) {
+              var item = response.data[Math.floor(Math.random() * response.data.length)];
+              $scope.questions.push(item);
+              console.log($scope.questions);
+            }
+          }
+        })
       $scope.subjects = GlobalSubjects;
       $scope.quizs = eval($routeParams.subjectId + "Questions");
+    });
+    app.controller("QnAController", function ($scope, $routeParams, $interval, $location) {
+      $scope.time = new Date();
+      // $location
+      $interval(function () {
+        $scope.time = new Date();
+      }, 1000);
+      $scope.backtohome = function () {
+        $location.path("/");
+      }
     });
   </script>
 
