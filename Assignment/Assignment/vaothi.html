@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="./trang.css">
+<h3> Danh sách câu hỏi </h3>
+<h4>Môn Học :</h4>
+<h4>Số Câu Hỏi :</h4>
+<h4>Thời Gian Làm Bài:</h4>
+<div id="timer" class="text-center">
+    <span id="minute"></span>
+    <span id="colon">:</span>
+    <span id="seconds">10</span>
+</div>
+<br>
+<br>
+<div class="row">   
+    <div class="col-12" ng-repeat="x in quizs">
+        <h3>{{x.Text}}</h3>
+        <div class="abc">
+            <ul>
+                <div class="row text-wrap">
+                    <div class="col-lg-3 text-wrap"ng-repeat="asw in x.Answers"><li class="text-wrap" >{{asw.Text}}</li></div>
+                </div>
+                
+            </ul> 
+        </div>
+
+    </div>
+
+    <hr>
+
+</div>
+</div>

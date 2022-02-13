@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chủ</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <link rel="stylesheet" href="lib/lib/custom/app.css">
+
+</head>
+
+<body ng-app="assTrang" class="ng-scope">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+            <div class="container-fluid ">
+                <a class="navbar-brand text-light" href="#!/trang-chu" target="trangchu"> <i
+                        class='bx bxs-home'></i>Trang Chủ</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active text-light" aria-current="page" href="#!/gioi-thieu"
+                                target="trangchu"><i class='bx bx-list-ul'> </i>Giới Thiệu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light " href="#!/lien-he" target="trangchu"><i class='bx bxs-phone'>
+                                </i>Liên Hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light " href="Hoidap.html" target="trangchu"><i
+                                    class='bx bx-question-mark'> </i>Hỏi Đáp</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" href="Gopy.html" target="trangchu"><i
+                                    class='bx bx-mail-send'> </i>Góp ý</a>
+                        </li>
+                    </ul>
+                </div>
+                <form class="d-flex">
+                    <ul>
+                        <li class="nav-item dropdown " style="list-style-type: none;">
+                            <a class="nav-link dropdown-toggle text-light font-weight-bold mt-2 " href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Tài Khoản
+                            </a>
+                            <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item " href="Dangki.html">Đăng Kí</a></li>
+                                <li><a class="dropdown-item " href="Dangnhapp.html">Đăng Nhập</a></li>
+                                <li><a class="dropdown-item " href="Quenmatkhau.html">Quên mật khẩu</a></li>
+                                <!-- <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item " href="#">Đăng Xuất</a></li>
+                                    <li><a class="dropdown-item " href="#">Đổi Mật Khẩu</a></li>
+                                    <li><a class="dropdown-item " href="#">Cập nhật tài khoản</a></li> -->
+                            </ul>
+                        </li>
+                    </ul>
+                </form>
+            </div>
+        </nav>
+
+        <div class="slide">
+            <marquee><b>CHÀO MỪNG BẠN ĐẾN VỚI TRANG THI ONLINE CỦA TRƯỜNG CAO ĐẲNG FPT POLYTECHNICH </b> </marquee>
+        </div>
+
+        <div ng-view></div>
+
+        <script src="./lib/lib/bootstrap/js/bootstrap.min.js"></script>
+        <script src="./lib/lib/angular/angular.min.js"></script>
+        <script src="./lib/lib/angular-route/angular-route.min.js"></script>
+        <script src="./lib/lib/db/Subjects.js"> </script>
+        <script src="./lib/lib/db/Quizs/ADAV.js"> </script>
+        <script>
+            var app = angular.module('assTrang', ['ngRoute']);
+            app.config(function ($routeProvider) {
+                $routeProvider
+                    .when("/trang-chu", {
+                        templateUrl: "trangchu2.html",
+                        controller: "trangchu2controller"
+                    })
+                    .otherwise({
+                        templateUrl: "trangchu2.html",
+                        controller: "trangchu2controller"
+
+                    })
+                    .when("/gioi-thieu", {
+                        templateUrl: "Gioithieu.html",
+                        controller: "Gioithieucontroller"
+                    })
+                    .when("/lien-he", {
+                        templateUrl: "lienhe.html",
+                        controller: "lienhecontroller"
+                    })
+                    .when("/vao-thi", {
+                        templateUrl: "vaothi.html",
+                        controller: "vaothicontroller"
+                    })
+
+            });
+            app.controller("trangchu2controller", function ($scop, $http) {
+                $scope.monTrang = [];
+                $http.get('lib/db/Subjects.js')
+                    .then(function (response) {
+                        console.log(response);
+                        if (response.statusText == "OK") {
+                            $scope.monTrang = response.data;
+                        }
+                    });
+            });
+            app.controller("vaothicontroller", function ($scope, $routeParams, $http) {
+                $scope.quizs = [];
+                $http.get('lib/db/Quizs/' + $routeParams.subjectId + '.js')
+                    .then(function (response) {
+                        console.log(response);
+                        if (response.statusText == "OK") {
+                            for (let index = 0; index < 10; index++) {
+                                var item = response.data[Math.floor(Math.random() * response.data.length)];
+                                $scope.quizs.push(item);
+                            }
+                            console.log($scope.quizs);
+                        }
+                        $scope.quizs = cauhoi;
+
+                    });
+            });
+
+        </script>
+    </div>
+
+</body>
+
+</html>
