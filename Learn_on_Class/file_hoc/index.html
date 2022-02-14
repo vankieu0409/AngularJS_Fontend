@@ -51,62 +51,62 @@
   <script src="lib/db/Subjects.js"></script>
   <script src="lib/db/Quizs/ADAV.js"></script>
   <script>
-    var app = angular.module('asm1', ['ngRoute']);
-    app.config(function ($routeProvider) {
-      $routeProvider
-        .when("/", {
-          templateUrl: "screens/homepage.html",
-          controller: "HomeController"
-        })
-        .when("/kiem-tra/:subjectId", {
-          templateUrl: "screens/kiem-tra.html",
-          controller: "TestProcessController"
-        })
-        .when("/hoi-dap", {
-          templateUrl: "screens/hoi-dap.html",
-          controller: "QnAController"
-        })
-        .otherwise({
-          template: "<h2>Đường dẫn không tồn tại</h2>"
-        })
-    });
-
-    app.controller("HomeController", function ($scope, $http) {
-      $scope.subjects = [];
-      $http.get('lib/db/Subjects.js')
-        .then(function (response) {
-          console.log(response);
-          if (response.statusText == "OK") {
-            $scope.subjects = response.data;
-          }
+     var subjectApiUrl = "http://localhost:3000/subjects";
+        var app = angular.module('asm1', ['ngRoute']);
+        app.config(function($routeProvider){
+            $routeProvider
+            .when("/", {
+                templateUrl: "screens/homepage.html",
+                controller: "HomeController"
+            })
+            .when("/kiem-tra/:subjectId", {
+                templateUrl: "screens/kiem-tra.html",
+                controller: "TestProcessController"
+            })
+            .when("/2", {
+                templateUrl: "screens/xanh.html"
+            })
+            .otherwise({
+                template: "<h2>Đường dẫn không tồn tại</h2>"
+            })
         });
-    });
-    app.controller("TestProcessController", function ($scope, $routeParams, $http) {
-      $scope.questions = [];
-      $http.get('lib/db/Quizs/' + $routeParams.subjectId + '.js')
-        .then(function (response) {
-          console.log(response);
-          if (response.statusText == "OK") {
-            for (let index = 0; index < 10; index++) {
-              var item = response.data[Math.floor(Math.random() * response.data.length)];
-              $scope.questions.push(item);
-            }
-            console.log($scope.questions);
-          }
-        })
-    });
-    app.controller("QnAController", function ($scope, $routeParams, $interval, $location, $window) {
-      $scope.time = new Date();
-      //console.log($location);
-      console.log($window);
-      $interval(function () {
-        $scope.time = new Date();
-      }, 1000);
-      $scope.backtohome = function () {
-        $location.path("/");
-      }
 
-    });
+        app.controller("HomeController", function($scope, $http){
+            $scope.subjects = [];
+            $scope.keyword = "";
+
+            $scope.changeKeyword = function(){
+              $http.get(`${subjectApiUrl}?Name_like=${$scope.keyword}`)
+                .then(function(response){
+                  if(response.statusText == "OK"){
+                    $scope.subjects = response.data;
+                  }
+                })
+            }
+
+            $http.get(subjectApiUrl)
+              .then(function(response) {
+                console.log(response);
+                if(response.statusText == "OK"){
+                  $scope.subjects = response.data;
+                }
+              })
+            console.log(2);
+        });
+        app.controller("TestProcessController", function($scope, $http, $routeParams){
+            $scope.apiUrl = "http://localhost:3000";
+            $scope.questions = [];
+            
+            $http.get(`${$scope.apiUrl}/${$routeParams.subjectId}`)
+              .then(response => {
+                  if(response.statusText == "OK"){
+                    $scope.questions = response.data;
+                    }
+                })
+            // $scope.subjects = GlobalSubjects;
+            // $scope.quizs = eval($routeParams.subjectId + "Questions");
+            console.log($routeParams.subjectId);
+        });
   </script>
 </body>
 

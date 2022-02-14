@@ -1,6 +1,7 @@
 {
   "students": [
     {
+      "id": 1,
       "username": "teonv",
       "password": "iloveyou",
       "fullname": "Nguyễn Văn Tèo",
@@ -11,6 +12,7 @@
       "marks": "0"
     },
     {
+      "id": 2,
       "username": "pheonv",
       "password": "iloveyou",
       "fullname": "Nguyễn Văn Chí Phèo",
@@ -21,6 +23,7 @@
       "marks": "0"
     },
     {
+      "id": 3,
       "username": "nopt",
       "password": "iloveyou",
       "fullname": "Phạm Thị Nở",
@@ -498,7 +501,7 @@
     },
     {
       "Id": 25120,
-      "Text": "Lệnh sau dùng để làm gì?                                                                                   <receiver             android:name=\".MyCallReceiver\"             android:exported=\"false\" >  </receiver>",
+      "Text": "Lệnh sau dùng để làm gì?                                                                                   <receiver             android:name=\".MyCallReceiver\"             android:exported=\"false\" >  </receiver>",
       "Marks": 1,
       "AnswerId": 104177,
       "Answers": [
@@ -1264,19 +1267,19 @@
       "Answers": [
         {
           "Id": 104296,
-          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIMAX);"
+          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_WIMAX);"
         },
         {
           "Id": 104297,
-          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_2.5G);"
+          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_2.5G);"
         },
         {
           "Id": 104298,
-          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);"
+          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_MOBILE);"
         },
         {
           "Id": 104299,
-          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_3G);"
+          "Text": "ConnectivityManager connMgr = (ConnectivityManager)           getSystemService(Context.CONNECTIVITY_SERVICE); NetworkInfo networkInfo = connMgr.getNetworkInfo(ConnectivityManager.TYPE_3G);"
         }
       ]
     },
@@ -1306,7 +1309,7 @@
     },
     {
       "Id": 25156,
-      "Text": "Bạn hãy cho biết kết quả khi thực hiện gọi phương thức sau? private String readLink(XmlPullParser parser) throws IOException, XmlPullParserException {         String link = \"\";         parser.require(XmlPullParser.START_TAG, ns, \"link\");         String ta",
+      "Text": "Bạn hãy cho biết kết quả khi thực hiện gọi phương thức sau? private String readLink(XmlPullParser parser) throws IOException, XmlPullParserException {         String link = \"\";         parser.require(XmlPullParser.START_TAG, ns, \"link\");         String ta",
       "Marks": 1,
       "AnswerId": 104305,
       "Answers": [
@@ -1634,7 +1637,7 @@
     },
     {
       "Id": 25170,
-      "Text": "Hãy cho biết kết quả khi thực hiện lệnh sau: Cursor phoneCursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,        null,        Phone_CONTACT_ID + \" = ?\",        new String[] { contact_id }, null);",
+      "Text": "Hãy cho biết kết quả khi thực hiện lệnh sau: Cursor phoneCursor = contentResolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,        null,        Phone_CONTACT_ID + \" = ?\",        new String[] { contact_id }, null);",
       "Marks": 1,
       "AnswerId": 104360,
       "Answers": [
@@ -2046,7 +2049,7 @@
         },
         {
           "Id": 103800,
-          "Text": "Không thể sử dụng tag trong XML layout"
+          "Text": "Không thể sử dụng tag trong XML layout"
         },
         {
           "Id": 103801,
@@ -2054,7 +2057,7 @@
         },
         {
           "Id": 103802,
-          "Text": "Có thể sử dụng tag trong XML layout"
+          "Text": "Có thể sử dụng tag trong XML layout"
         }
       ]
     },
@@ -7590,19 +7593,19 @@
       "Answers": [
         {
           "Id": 104694,
-          "Text": "onDrawerClosed(view)   và onDrawerOpened(drawerView)"
+          "Text": "onDrawerClosed(view)   và onDrawerOpened(drawerView)"
         },
         {
           "Id": 104695,
-          "Text": "onDrawerClose(view)   và onDrawerOpene(drawerView)"
+          "Text": "onDrawerClose(view)   và onDrawerOpene(drawerView)"
         },
         {
           "Id": 104696,
-          "Text": "onClosedDrawer(view)   và onOpenedDrawer(drawerView"
+          "Text": "onClosedDrawer(view)   và onOpenedDrawer(drawerView"
         },
         {
           "Id": 104697,
-          "Text": "onClosed(view)   và onOpened(drawerView)"
+          "Text": "onClosed(view)   và onOpened(drawerView)"
         }
       ]
     },
@@ -7656,7 +7659,7 @@
     },
     {
       "Id": 25260,
-      "Text": "Navigation Drawer là một bảng điều hướng xuất hiện khi nào ?",
+      "Text": "Navigation Drawer là một bảng điều hướng xuất hiện khi nào ?",
       "Marks": 1,
       "AnswerId": 104706,
       "Answers": [
@@ -8106,7 +8109,7 @@
     },
     {
       "Id": 25987,
-      "Text": "Để một điều khiển HTML được nhận diện như là một điều khiển trên Server, bạn  phải:A. Gán giá trị cho thuộc tính Runat của điều khiển bằng \"Server\"B. Gán giá trị cho thuộc tính Server của điều khiển bằng \"Runat\"",
+      "Text": "Để một điều khiển HTML được nhận diện như là một điều khiển trên Server, bạn  phải:A. Gán giá trị cho thuộc tính Runat của điều khiển bằng \"Server\"B. Gán giá trị cho thuộc tính Server của điều khiển bằng \"Runat\"",
       "Marks": 1,
       "AnswerId": 107639,
       "Answers": [
@@ -8424,19 +8427,19 @@
       "Answers": [
         {
           "Id": 107691,
-          "Text": "Thêm phần tử Theme vào file web.config. Chỉ định giá trị thuộc tính fileName bằng tên Theme         <system.web>                   <theme fileName=\"ThemeName\" />         </system.web>"
+          "Text": "Thêm phần tử Theme vào file web.config. Chỉ định giá trị thuộc tính fileName bằng tên Theme         <system.web>                   <theme fileName=\"ThemeName\" />         </system.web>"
         },
         {
           "Id": 107692,
-          "Text": "Thêm thuộc tính Theme vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Theme=\" ThemeName\" %>"
+          "Text": "Thêm thuộc tính Theme vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Theme=\" ThemeName\" %>"
         },
         {
           "Id": 107693,
-          "Text": "Thêm thuộc tính Skin vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Skin=\" ThemeName\" %>"
+          "Text": "Thêm thuộc tính Skin vào chỉ dẫn Page     <%@ Page=\"\" Language=\"C#\" Skin=\" ThemeName\" %>"
         },
         {
           "Id": 107694,
-          "Text": "Thêm phần tử Pages vào file web.config. Chỉ định giá trị thuộc tính Theme bằng tên Theme         <system.web>                   <pages theme=\"ThemeName\" />         </system.web>"
+          "Text": "Thêm phần tử Pages vào file web.config. Chỉ định giá trị thuộc tính Theme bằng tên Theme         <system.web>                   <pages theme=\"ThemeName\" />         </system.web>"
         }
       ]
     },
@@ -9384,15 +9387,15 @@
       "Answers": [
         {
           "Id": 107851,
-          "Text": "<linked href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
+          "Text": "<linked href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
         },
         {
           "Id": 107852,
-          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
+          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" rel=\"stylesheet\"  type=\"text/css\"  />"
         },
         {
           "Id": 107853,
-          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" type=\"text/css\"  />"
+          "Text": "<link href=\"my_style_sheet.css\" media=\"screen\" type=\"text/css\"  />"
         },
         {
           "Id": 107854,
@@ -9456,7 +9459,7 @@
       "Answers": [
         {
           "Id": 107863,
-          "Text": "Cascading Style Sheet"
+          "Text": "Cascading Style Sheet"
         },
         {
           "Id": 107864,
@@ -9464,11 +9467,11 @@
         },
         {
           "Id": 107865,
-          "Text": "Cascaded Style Sheets"
+          "Text": "Cascaded Style Sheets"
         },
         {
           "Id": 107866,
-          "Text": "Cascading Style Sheets"
+          "Text": "Cascading Style Sheets"
         }
       ]
     },
@@ -10828,19 +10831,19 @@
       "Answers": [
         {
           "Id": 103503,
-          "Text": "B,D Đúng"
+          "Text": "B,D Đúng"
         },
         {
           "Id": 103504,
-          "Text": "D Đúng"
+          "Text": "D Đúng"
         },
         {
           "Id": 103505,
-          "Text": "A,B Đúng"
+          "Text": "A,B Đúng"
         },
         {
           "Id": 103506,
-          "Text": "C, B Đúng"
+          "Text": "C, B Đúng"
         }
       ]
     },
@@ -14834,7 +14837,7 @@
     },
     {
       "Id": 25477,
-      "Text": "Trong Animator components, thuộc tính nào trong Culling Mode chỉ định những animations chỉ được chạy khi chúng được render.",
+      "Text": "Trong Animator components, thuộc tính nào trong Culling Mode chỉ định những animations chỉ được chạy khi chúng được render.",
       "Marks": 1,
       "AnswerId": 105530,
       "Answers": [
@@ -15200,7 +15203,7 @@
       "Answers": [
         {
           "Id": 105587,
-          "Text": "Instantiate(gameObject, Vector3, Quaternion)"
+          "Text": "Instantiate(gameObject, Vector3, Quaternion)"
         },
         {
           "Id": 105588,
@@ -15208,7 +15211,7 @@
         },
         {
           "Id": 105589,
-          "Text": "Input.GetAxis (\"Horizontal\")"
+          "Text": "Input.GetAxis (\"Horizontal\")"
         },
         {
           "Id": 105590,
@@ -15482,7 +15485,7 @@
     },
     {
       "Id": 25504,
-      "Text": "Trong môi trường 3D, thông số nào sau đây xác định bề mặt va chạm đề tạo hiệu ứng vật lý,  ví dụ như hiệu ứng đàn hồi cần bề mặt đàn hồi...?",
+      "Text": "Trong môi trường 3D, thông số nào sau đây xác định bề mặt va chạm đề tạo hiệu ứng vật lý,  ví dụ như hiệu ứng đàn hồi cần bề mặt đàn hồi...?",
       "Marks": 1,
       "AnswerId": 105637,
       "Answers": [
@@ -16538,7 +16541,7 @@
     },
     {
       "Id": 25548,
-      "Text": "Thuộc tính nào của thành phần Sound: nếu enable, âm thanh sẽ được chạy ngay khi ra mắt Scene. Nếu để Disable, khi cần chạy âm thanh chúng ta phải gọi phương thức/chức năng Play() từ Script.?",
+      "Text": "Thuộc tính nào của thành phần Sound: nếu enable, âm thanh sẽ được chạy ngay khi ra mắt Scene. Nếu để Disable, khi cần chạy âm thanh chúng ta phải gọi phương thức/chức năng Play() từ Script.?",
       "Marks": 1,
       "AnswerId": 105814,
       "Answers": [
@@ -17662,27 +17665,27 @@
       "Answers": [
         {
           "Id": 106911,
-          "Text": "Phần tử <header> được sử dụng tối đa 5 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 5 lần trên trang"
         },
         {
           "Id": 106912,
-          "Text": "Phần tử <header> được sử dụng nhiều lần trên trang"
+          "Text": "Phần tử <header> được sử dụng nhiều lần trên trang"
         },
         {
           "Id": 106913,
-          "Text": "Phần tử <header> được sử dụng tối đa 2 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 2 lần trên trang"
         },
         {
           "Id": 106914,
-          "Text": "Phần tử <header> bắt buộc phải được khai báo ở phía dưới cùng đoạn mã trang"
+          "Text": "Phần tử <header> bắt buộc phải được khai báo ở phía dưới cùng đoạn mã trang"
         },
         {
           "Id": 106915,
-          "Text": "Phần tử <header> được sử dụng tối đa 3 lần trên trang"
+          "Text": "Phần tử <header> được sử dụng tối đa 3 lần trên trang"
         },
         {
           "Id": 106916,
-          "Text": "Phần tử <header> chỉ được sử dụng một lần trên trang"
+          "Text": "Phần tử <header> chỉ được sử dụng một lần trên trang"
         }
       ]
     },
@@ -27508,7 +27511,7 @@
     },
     {
       "Id": 25815,
-      "Text": "Để cài đặt FireBase, ta đưa dòng code: <script src='https://cdn.firebase.com/v0/firebase.js'></script> vào phần nào?",
+      "Text": "Để cài đặt FireBase, ta đưa dòng code: <script src='https://cdn.firebase.com/v0/firebase.js'></script> vào phần nào?",
       "Marks": 1,
       "AnswerId": 106828,
       "Answers": [
@@ -27604,7 +27607,7 @@
     },
     {
       "Id": 25819,
-      "Text": "Ưu điểm của framework Ember là gì?",
+      "Text": "Ưu điểm của framework Ember là gì?",
       "Marks": 1,
       "AnswerId": 106845,
       "Answers": [
@@ -27724,19 +27727,19 @@
       "Answers": [
         {
           "Id": 106244,
-          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   <div> </ul>"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   <div> </ul>"
         },
         {
           "Id": 106245,
-          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></ul>   </li> </div>"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></ul>   </li> </div>"
         },
         {
           "Id": 106246,
-          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</a></li>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
         },
         {
           "Id": 106247,
-          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</li></a>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
+          "Text": "<div id=\"menu\">   <ul>     <li> <a href=\"#\">Trang chủ</li></a>     <li> <a href=\"#\">Giới thiệu</a></li>   </ul> </div>"
         }
       ]
     },
@@ -27814,7 +27817,7 @@
     },
     {
       "Id": 25668,
-      "Text": "Thẻ nào là thẻ cha của thẻ img trong đoạn mã sau? <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
+      "Text": "Thẻ nào là thẻ cha của thẻ img trong đoạn mã sau? <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
       "Marks": 1,
       "AnswerId": 106263,
       "Answers": [
@@ -27838,7 +27841,7 @@
     },
     {
       "Id": 25669,
-      "Text": "Xác định luật css viết sai trong đoạn mã sau: <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
+      "Text": "Xác định luật css viết sai trong đoạn mã sau: <div id=\"header\">     <div id=\"banner\">         <img src=\"Images/Banner.jpg\" />         <p id=\"logo\">Việt Nam Xuất Khẩu</p>     </div>     <div id=\"menu\"> </div> </div>",
       "Marks": 1,
       "AnswerId": 106265,
       "Answers": [
@@ -27862,7 +27865,7 @@
     },
     {
       "Id": 25670,
-      "Text": "Để mỗi khi click chuột vào ô textbox, màu nền ô đó chuyển sang màu đỏ thì lệnh CSS tác dụng lên thẻ <input type=\"text\" name=\"user\" />  được viết là:",
+      "Text": "Để mỗi khi click chuột vào ô textbox, màu nền ô đó chuyển sang màu đỏ thì lệnh CSS tác dụng lên thẻ <input type=\"text\" name=\"user\" />  được viết là:",
       "Marks": 1,
       "AnswerId": 106271,
       "Answers": [
@@ -28038,7 +28041,7 @@
     },
     {
       "Id": 25678,
-      "Text": "Với lệnh CSS là p span{color:blue;}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị: <div class=\"new\">      <p class=\"title\">Hàng trăm người chặn <span> quốc lộ 1A</span></p>      <p class=\"content\">Thấy <span>tàu quốc tế </span> đến, doanh nghiệp lạ",
+      "Text": "Với lệnh CSS là p span{color:blue;}áp dụng cho đoạn mã XHTML dưới đây, style sẽ hiển thị: <div class=\"new\">      <p class=\"title\">Hàng trăm người chặn <span> quốc lộ 1A</span></p>      <p class=\"content\">Thấy <span>tàu quốc tế </span> đến, doanh nghiệp lạ",
       "Marks": 1,
       "AnswerId": 106298,
       "Answers": [
@@ -28076,7 +28079,7 @@
         },
         {
           "Id": 106302,
-          "Text": "<style  type=\"text/css\"> </style>"
+          "Text": "<style  type=\"text/css\"> </style>"
         },
         {
           "Id": 106303,
@@ -28486,7 +28489,7 @@
     },
     {
       "Id": 25697,
-      "Text": "Với lệnh CSS: #box {width:200px; height:100px; background-color:#09F} .Tin{width:100px; height:100px; background-color:#930;} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"box\">     <p class=\"Tin\">Gareth Bale đánh giày cho Neymar ở El Clasico</p> </div> Th",
+      "Text": "Với lệnh CSS: #box {width:200px; height:100px; background-color:#09F} .Tin{width:100px; height:100px; background-color:#930;} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"box\">     <p class=\"Tin\">Gareth Bale đánh giày cho Neymar ở El Clasico</p> </div> Th",
       "Marks": 1,
       "AnswerId": 106372,
       "Answers": [
@@ -28736,7 +28739,7 @@
         },
         {
           "Id": 106411,
-          "Text": "Với lệnh CSS: #content{width:600px; height:200px; background-color:#990} #left{width:200px; height:200px; background-color:#930; margin:10px;float:left} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"content\">      <div id=\"left\"></div>      <div id=\"right\""
+          "Text": "Với lệnh CSS: #content{width:600px; height:200px; background-color:#990} #left{width:200px; height:200px; background-color:#930; margin:10px;float:left} Áp dụng cho đoạn mã XHTML dưới đây: <div id=\"content\">      <div id=\"left\"></div>      <div id=\"right\""
         },
         {
           "Id": 106412,
@@ -28774,7 +28777,7 @@
     },
     {
       "Id": 25709,
-      "Text": "Với lệnh CSS: #content { width:840px; margin-left:auto; margin-right:auto; position:relative; background-color:#0FF;}  #left { position:absolute; width:240px; left:0px;}  #right { position:absolute; width: 600px; padding:0;} Áp dụng cho đoạn mã XHTML dưới",
+      "Text": "Với lệnh CSS: #content { width:840px; margin-left:auto; margin-right:auto; position:relative; background-color:#0FF;}  #left { position:absolute; width:240px; left:0px;}  #right { position:absolute; width: 600px; padding:0;} Áp dụng cho đoạn mã XHTML dưới",
       "Marks": 1,
       "AnswerId": 106418,
       "Answers": [
@@ -29014,7 +29017,7 @@
     },
     {
       "Id": 25720,
-      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để tạo đường kẻ dưới nét đứt 1px màu đỏ cho mỗi dòng của danh sách người dùng sử dụng lệnh nào?",
+      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để tạo đường kẻ dưới nét đứt 1px màu đỏ cho mỗi dòng của danh sách người dùng sử dụng lệnh nào?",
       "Marks": 1,
       "AnswerId": 106458,
       "Answers": [
@@ -29038,7 +29041,7 @@
     },
     {
       "Id": 25721,
-      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để xóa bỏ dấu tròn bullet của danh sách người dùng sử dụng lệnh nào?",
+      "Text": "Với đoạn mã XHTML: <ul>     <li> Danh sách 1 </li>     <li> Danh sách 2 </li>     <li> Danh sách 3 </li> </ul> Để xóa bỏ dấu tròn bullet của danh sách người dùng sử dụng lệnh nào?",
       "Marks": 1,
       "AnswerId": 106463,
       "Answers": [
@@ -29078,7 +29081,7 @@
     },
     {
       "Id": 25723,
-      "Text": "Muốn khi click chuột để nhập liệu vào textbox, màu nền textbox chuyển sang màu xanh thì khai báo CSS như thế nào? <input class=\"NhapLieu\" type=\"text\" name=\"DiaChi\"  />",
+      "Text": "Muốn khi click chuột để nhập liệu vào textbox, màu nền textbox chuyển sang màu xanh thì khai báo CSS như thế nào? <input class=\"NhapLieu\" type=\"text\" name=\"DiaChi\"  />",
       "Marks": 1,
       "AnswerId": 106468,
       "Answers": [
@@ -29102,7 +29105,7 @@
     },
     {
       "Id": 25724,
-      "Text": "Với đoạn mã XHTML: <div id=\"menu\">     <ul>         <li><a href=\"#\"> Trang chủ</a></li>         <li><a href=\"#\"> Sản phẩm</a></li>         <li><a href=\"#\"> Liên hệ</a></li>     </ul> </div> và lệnh CSS: #menu ul li{float:left;padding:0 20px;} Muốn mỗi thà",
+      "Text": "Với đoạn mã XHTML: <div id=\"menu\">     <ul>         <li><a href=\"#\"> Trang chủ</a></li>         <li><a href=\"#\"> Sản phẩm</a></li>         <li><a href=\"#\"> Liên hệ</a></li>     </ul> </div> và lệnh CSS: #menu ul li{float:left;padding:0 20px;} Muốn mỗi thà",
       "Marks": 1,
       "AnswerId": 106472,
       "Answers": [
@@ -29246,7 +29249,7 @@
     },
     {
       "Id": 25730,
-      "Text": "Giả sử có mã XHTML:  <input class=\"NhapLieu\" type=\"text\" name=\"User\"   /> Muốn để ô textbox có dòng chữ \"Điền tên đăng nhập\" mặc định, khi click chuột vào dòng chữ biến mất thì người dùng thêm thuộc tính nào vào thẻ input?",
+      "Text": "Giả sử có mã XHTML:  <input class=\"NhapLieu\" type=\"text\" name=\"User\"   /> Muốn để ô textbox có dòng chữ \"Điền tên đăng nhập\" mặc định, khi click chuột vào dòng chữ biến mất thì người dùng thêm thuộc tính nào vào thẻ input?",
       "Marks": 1,
       "AnswerId": 106495,
       "Answers": [
@@ -34914,7 +34917,7 @@
     },
     {
       "Id": 24867,
-      "Text": "Hãy cho biết kết quả hiển thị khi thực hiện đoạn mã sau: txtDiem.Text = \"0a60\"Select Case Val(txtDiem.Text)          Case 0             lblKetQua.Text = \"Điểm liệt!\"          Case Is >= 50             lblKetQua.Text = \"Qua môn!\"          Case Else        ",
+      "Text": "Hãy cho biết kết quả hiển thị khi thực hiện đoạn mã sau: txtDiem.Text = \"0a60\"Select Case Val(txtDiem.Text)          Case 0             lblKetQua.Text = \"Điểm liệt!\"          Case Is >= 50             lblKetQua.Text = \"Qua môn!\"          Case Else        ",
       "Marks": 1,
       "AnswerId": 103155,
       "Answers": [
@@ -35130,7 +35133,7 @@
     },
     {
       "Id": 24876,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
       "Marks": 1,
       "AnswerId": 103188,
       "Answers": [
@@ -35170,7 +35173,7 @@
     },
     {
       "Id": 24878,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do   number += 4 Loop Until i > 2",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do   number += 4 Loop Until i > 2",
       "Marks": 1,
       "AnswerId": 103196,
       "Answers": [
@@ -35218,7 +35221,7 @@
     },
     {
       "Id": 24880,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Do While number < 4   number *= 2 Loop",
       "Marks": 1,
       "AnswerId": 103204,
       "Answers": [
@@ -35266,7 +35269,7 @@
     },
     {
       "Id": 24882,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do    number += 4 Loop While i > 2",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 2 Dim i As Integer = 0 Do    number += 4 Loop While i > 2",
       "Marks": 1,
       "AnswerId": 103210,
       "Answers": [
@@ -35338,7 +35341,7 @@
     },
     {
       "Id": 24885,
-      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 0 For i As Integer = 0 To 5    number += i Next",
+      "Text": "Giá trị của biến number sau khi thực hiện xong vòng lặp là bao nhiêu? Dim number As Integer = 0 For i As Integer = 0 To 5    number += i Next",
       "Marks": 1,
       "AnswerId": 103224,
       "Answers": [
@@ -35842,7 +35845,7 @@
     },
     {
       "Id": 24906,
-      "Text": "Xây dựng hàm tính chu vi tam giác sau:Private Function CHU_VI(Optional ByVal a As Integer = 10, Optional ByVal b As Integer = 10, Optional ByVal c As Integer = 10) As Integer    Return a + b + cEnd FunctionKết quả chu vi bằng bao nhiêu khi thực hiện lời g",
+      "Text": "Xây dựng hàm tính chu vi tam giác sau:Private Function CHU_VI(Optional ByVal a As Integer = 10, Optional ByVal b As Integer = 10, Optional ByVal c As Integer = 10) As Integer    Return a + b + cEnd FunctionKết quả chu vi bằng bao nhiêu khi thực hiện lời g",
       "Marks": 1,
       "AnswerId": 103307,
       "Answers": [
@@ -36072,7 +36075,7 @@
   "WEBU": [
     {
       "Id": 25580,
-      "Text": "Trong Dreamweaver CS4 muốn  liên kết bên ngoài website, người dùng sử dụng loại liên kết nào?",
+      "Text": "Trong Dreamweaver CS4 muốn  liên kết bên ngoài website, người dùng sử dụng loại liên kết nào?",
       "Marks": 1,
       "AnswerId": 105940,
       "Answers": [
@@ -36284,7 +36287,7 @@
     },
     {
       "Id": 25589,
-      "Text": "Thông thường tiêu chuẩn Internet cho việc đặt tên trang chủ, hay trang đầu tiên mà người dùng truy  cập vào website sẽ là",
+      "Text": "Thông thường tiêu chuẩn Internet cho việc đặt tên trang chủ, hay trang đầu tiên mà người dùng truy  cập vào website sẽ là",
       "Marks": 1,
       "AnswerId": 105975,
       "Answers": [
@@ -36308,7 +36311,7 @@
     },
     {
       "Id": 25590,
-      "Text": "Cách đặt Css nào mà chỉ áp dụng được cho một thẻ một lần và không thể tái sử dụng  lại",
+      "Text": "Cách đặt Css nào mà chỉ áp dụng được cho một thẻ một lần và không thể tái sử dụng  lại",
       "Marks": 1,
       "AnswerId": 105980,
       "Answers": [
@@ -36392,7 +36395,7 @@
     },
     {
       "Id": 25594,
-      "Text": "CSS có thể đặt ở vị trí nào để kết hợp với HTML tạo định dạng cho nội dung  trên trang web",
+      "Text": "CSS có thể đặt ở vị trí nào để kết hợp với HTML tạo định dạng cho nội dung  trên trang web",
       "Marks": 1,
       "AnswerId": 105992,
       "Answers": [
@@ -37348,7 +37351,7 @@
     },
     {
       "Id": 25637,
-      "Text": "Giá trị  nào sau đây không phải là giá trị của thuộc tính Type của thẻ Button trong HTML",
+      "Text": "Giá trị  nào sau đây không phải là giá trị của thuộc tính Type của thẻ Button trong HTML",
       "Marks": 1,
       "AnswerId": 106144,
       "Answers": [
@@ -37628,7 +37631,7 @@
     },
     {
       "Id": 25649,
-      "Text": "Giao thức thường được sử dụng để upload website lên web server là giao thức nào  ?",
+      "Text": "Giao thức thường được sử dụng để upload website lên web server là giao thức nào  ?",
       "Marks": 1,
       "AnswerId": 106192,
       "Answers": [
