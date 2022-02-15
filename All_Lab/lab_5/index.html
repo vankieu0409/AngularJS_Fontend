@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab_5</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+    <div class="container">
+        <element ng-controller="MyController1">
+            <div class="from-group">
+                <label for="">Họ và tên: </label>
+                <input type="text" class="form-control" ng-model="student.fullName">
+            </div>
+            <div class="from-group">
+                <label for="">Ngày Sinh: </label>
+                <input type="text" class="form-control" ng-model="student.birthday">
+            </div>
+            <div class="from-group">
+                <label for="">Điểm: </label>
+                <input type="text" class="form-control" ng-model="student.mark">
+            </div>
+            <div class="from-group">
+                <button class="btn btn-primary" ng-click="insert()" ng-show="index == -1">Thêm</button>
+                <button class="btn btn-primary" ng-click="Update()" ng-hide="index == -1">Sửa</button>
+                <button class="btn btn-primary" ng-click="delete()" ng-hide="index == -1">Xóa</button>
+
+                <button class="btn btn-primary" ng-click="cancel()">Hủy</button>
+                <button class="btn btn-primary" ng-click="clear()">Mới</button>
+            </div>
+
+            <table class="table">
+                <thead>
+                    <tr>
+
+                        <th>Họ và tên</th>
+                        <th>Ngày Sinh</th>
+                        <th>Điểm</th>
+                        <th>Xếp Loại</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="student in students">
+
+                        <td>{{student.fullName}}</td>
+                        <td>{{student.birthday}}</td>
+                        <td>{{student.mark}}</td>
+                        <td>
+                            <span ng-if="student.mark < 5"> Yếu/Kém</span>
+                            <span ng-if="student.mark >= 5 && student.mark<8"> Trung Bình</span>
+                            <span ng-if="student.mark >= 8"> Khá/Giỏi</span>
+
+                        </td>
+                        <td><a href="#" ng-click="edit($index)">sửa</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </element>
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('MyController1', function ($scope) {
+            $scope.student = {};
+            $scope.index = -1;
+            $scope.save = function () {
+                $scope.students.push(angular.copy($scope.student));
+            }
+            $scope.insert = function () {
+                $scope.students.push(angular.copy($scope.student));
+                $scope.clear();
+            }
+            $scope.Update = function () {
+                $scope.students[$scope.index] = angular.copy($scope.student);
+                $scope.clear();
+            };
+            $scope.delete = function () {
+                $scope.students.splice($scope.index, 1);
+                $scope.clear();
+            }
+            $scope.cancel = function () {
+                if ($scope.index == -1) {
+                    $scop.clear();
+                }
+                else {
+                    $scope.edit($scope.index);
+                }
+            }
+            $scope.clear = function () {
+                $scope.student = {};
+                $scope.index = -1;
+            }
+            $scope.edit = function (index) {
+                $scope.index = index;
+                $scope.student = angular.copy($scope.students[index]);
+            }
+
+            $scope.students = [
+                {
+                    fullName: 'Nguyễn Văn Kiều',
+                    birthday: '01/01/2000',
+                    mark: '3'
+                },
+                {
+                    fullName: 'Phí Thị Trang',
+                    birthday: '08/08/1998',
+                    mark: '10'
+                },
+                {
+                    fullName: 'Nguyễn Văn Kiên',
+                    birthday: '01/01/2000',
+                    mark: '5'
+                },
+                {
+                    fullName: 'Nguyễn Thị Thanh Bình',
+                    birthday: '01/01/2000',
+                    mark: '8'
+                },
+
+            ]
+
+        });
+    </script>
+</body>
+
+
+</html>
