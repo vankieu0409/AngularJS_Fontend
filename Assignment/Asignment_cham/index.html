@@ -33,6 +33,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="#!/">Trang chủ</a>
+      
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -52,15 +53,21 @@
           </ul>
         </div>
       </div>
-      <div class="dropdown" style="margin-left: 5px;">
-        <nav class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-bs-toggle="dropdown"
-          aria-haspopup="true" aria-expanded="false"> Tài khoản
-        </nav>
+      <div class="nav-item dropdown" style="margin-left: 5px;">
+        <a class="btn btn-secondary dropdown-toggle waves-effect" type="button" id="dropdownMenu2"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{(student == null) ? 'Tài khoản' :
+          student.username}}
+        </a>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <div ng-show="student==null">
-            <a ng-click="intro=0" class="dropdown-item" href="#!/dang-ki">Đăng kí</a>
+          <div ng-show="1 == 1">
+            <a ng-click="intro=0" class="dropdown-item" href="#!/register">Đăng kí</a>
             <a ng-click="intro=0" class="dropdown-item" href="#!/dang-nhap">Đăng nhập</a>
             <a ng-click="intro=0" class="dropdown-item" href="#!/forgotpassword">Quên mật khẩu</a>
+          </div>
+          <div ng-hide="student==null">
+            <a ng-click="intro=1" class="dropdown-item" href="#!updateaccount">Thông tin cá nhân</a>
+            <a ng-click="intro=1" class="dropdown-item" href="#!changepassword">Đổi mật khẩu</a>
+            <a ng-click="intro=1;logoff()" class="dropdown-item" href="">Đăng xuất</a>
           </div>
         </div>
       </div>
@@ -150,9 +157,19 @@
   <script src="lib/angular-route/angular-route.min.js"></script>
   <script src="lib/db/Subjects.js"></script>
   <script src="lib/db/Quizs/ADAV.js"></script>
+  <script src="Page/HomeController.js"></script>
+  <script src="Page/TessProsessController.js"></script>
+  <script src="Page/LoginController.js"></script>
+  <script src="Page/RegisterController.js"></script>
   <script>
     var subjectsApiUrl = "http://localhost:3000/subjects";
+    var studentsApiUrl = "http://localhost:3000/students";
     var app = angular.module('asm1', ['ngRoute']);
+    // app.run(function ($rootScope, $http) {
+    //   $http.get($studentsApiUrl).then(function (response) {
+    //     $rootScope.students = response.data;
+    //   });
+    // });
     app.config(function ($routeProvider) {
       $routeProvider
         .when("/", {
@@ -177,7 +194,7 @@
           templateUrl: "screens/login.html",
           controller: "LoginController"
         })
-        .when("/dang-ki", {
+        .when("/register", {
           templateUrl: "screens/register.html",
           controller: "RegisterController"
         })
@@ -185,60 +202,11 @@
           template: "<h2>Đường dẫn không tồn tại</h2>"
         })
     });
-
-    app.controller("HomeController", function ($scope, $http) {
-      $scope.subjects = [];
-      $http.get(subjectsApiUrl)
-        .then(function (response) {
-          console.log(response);
-          if (response.statusText == "OK") {
-            $scope.subjects = response.data;
-          }
-        });
-    });
-    app.controller("TestProcessController", function ($scope, $routeParams, $http, $interval) {
-      $scope.remainingTime = 900;
-      $scope.apiUrl = "http://localhost:3000";
-      $scope.questions = [];
-      $http.get(`${$scope.apiUrl}/${$routeParams.subjectId}`)
-        .then(response => {
-          console.log(response);
-          if (response.statusText == "OK") {
-            for (let index = 0; index < 10; index++) {
-              var item = response.data[Math.floor(Math.random() * response.data.length)];
-              $scope.questions.push(item);
-            }
-            console.log($scope.questions);
-          }
-        })
-      $scope.timeInterval = $interval(function () {
-        $scope.remainingTime = $scope.remainingTime - 1;
-        if ($scope.remainingTime == 0) {
-          $interval.cancel($scope.timeInterval);
-          $scope.remainingTime = 900;
-        }
-      }, 1000);
-    });
-    app.controller("QnAController", function ($scope, $routeParams, $interval, $location, $window) {
-
-      $scope.timeInterval = $interval(function () {
-        $scope.remainingTime = $scope.remainingTime - 1;
-        if ($scope.remainingTime == 0) {
-          $interval.cancel($scope.timeInterval);
-          $scope.remainingTime = 900;
-        }
-      }, 1000);
-      // $scope.time = new Date();
-      // //console.log($location);
-      // console.log($window);
-      // $interval(function () {
-      //   $scope.time = new Date();
-      // }, 1000);
-      // $scope.backtohome = function () {
-      //   $location.path("/");
-      // }
-
-    });
+    app.controller("HomeController", ['$scope', '$http', HomeController]);
+    app.controller("TestProcessController", ['$scope', '$http', '$routeParams', TestProcessController]);
+    app.controller("LoginController", ['$scope', '$http', LoginController]);
+    
+    app.controller("RegisterController", ['$scope', '$http', RegisterController]);
   </script>
 </body>
 

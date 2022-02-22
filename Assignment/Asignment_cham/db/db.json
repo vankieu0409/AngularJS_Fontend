@@ -32,6 +32,41 @@
       "birthday": "1993-05-15",
       "schoolfee": "2000000",
       "marks": "0"
+    },
+    {
+      "fullname": "Akai Suichi",
+      "username": "teonva",
+      "password": "aaaaaaa",
+      "gender": "true",
+      "birthday": "2022-02-08T17:00:00.000Z",
+      "mark": "",
+      "id": 4
+    },
+    {
+      "fullname": "Akai Suichi",
+      "password": "iloveyou",
+      "gender": "true",
+      "birthday": "2022-02-02T17:00:00.000Z",
+      "mark": "",
+      "id": 5
+    },
+    {
+      "fullname": "kiềajkfhjkahd",
+      "username": "ádasdasd",
+      "password": "123456",
+      "gender": "true",
+      "birthday": "2022-02-02T17:00:00.000Z",
+      "schoolfee": 2222,
+      "id": 6
+    },
+    {
+      "fullname": "kiềajkfhjkahd",
+      "username": "ádasdasd",
+      "password": "123456",
+      "gender": "true",
+      "birthday": "2022-02-02T17:00:00.000Z",
+      "schoolfee": 2222,
+      "id": 7
     }
   ],
   "subjects": [
