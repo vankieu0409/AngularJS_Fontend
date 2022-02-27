@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asignmet_Web207</title>
+  <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/custom/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="lib/custom/app.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <style>
+    body {
+      background-image: url(https://ap.poly.edu.vn/images/Banner-AP.png);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+
+<body ng-app="asm1">
+  <div class="container">
+    <div class="row">
+      <br>
+    </div>
+  </div>
+  <div class="container">
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#!/">Trang chủ</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+            <li class="nav-item">
+              <a class="nav-link" href="#!/gioi-thieu">Giới thiệu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!/lien-he">Liên hệ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#!/hoi-dap">Hỏi đáp</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav-item dropdown" style="margin-left: 5px;">
+        <a class="btn btn-secondary dropdown-toggle waves-effect" type="button" id="dropdownMenu2"
+          data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> {{(student == null) ? 'Tài khoản' :
+          student.fullname}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <div ng-show="student==null">
+            <a ng-click="intro=0" class="dropdown-item" href="#!/register">Đăng kí</a>
+            <a ng-click="intro=0" class="dropdown-item" href="#!/dang-nhap">Đăng nhập</a>
+            <a ng-click="intro=0" class="dropdown-item" href="#!/forgotpassword">Quên mật khẩu</a>
+          </div>
+          <div ng-hide="student==null">
+            <a ng-click="intro=1" class="dropdown-item" href="#!updateaccount">Thông tin cá nhân</a>
+            <a ng-click="intro=1" class="dropdown-item" href="#!changepassword">Đổi mật khẩu</a>
+            <a ng-click="intro=1;logoff()" class="dropdown-item" href="">Đăng xuất</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="slide">
+      <marquee><b>CHÀO MỪNG BẠN ĐẾN VỚI TRANG THI ONLINE CỦA TRƯỜNG CAO ĐẲNG FPT POLYTECHNICH </b> </marquee>
+    </div>
+
+    <div ng-view></div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col">
+
+          <br>
+        </div>
+      </div>
+      <div class="row  bg-light">
+        <div class="column col-md-4 footer">
+          <div class="widgets">
+            <div id="text-6" class="widget widget_text">
+              <div class="textwidget">
+                <p>
+                  <img src="https://caodang.fpt.edu.vn/wp-content/uploads/logo-3.png" alt="logo-ap" width="200"
+                    height="75" class="alignnone size-full wp-image-12" />
+                <div
+                  style="clear: both; color: #f7941d; font-size: 20px; text-transform: uppercase; margin-top: 20px; display: block; padding-top: 15px;">
+                  THÔNG TIN LIÊN HỆ</div>
+                <div class="hiden-xs">
+                  <p>Điện thoại: (024) 7300 1955</p>
+                  <p>Email: caodang@fpt.edu.vn</p>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column col-md-4 footer-2">
+          <div class="widgets">
+            <div id="text-7" class="widget widget_text">
+              <div class="textwidget">
+                <div style="color: #f7941d; margin-bottom: 10px; font-size: 20px;">HỆ THỐNG VĂN PHÒNG TUYỂN SINH</div>
+                <div class="footer-xs" style="text-decoration: underline; padding-top: 10px;">Cơ sở Hà Nội</div>
+                <p><i class="fa fa-map-marker" style="color: #f7941d;"></i> Văn phòng Tuyển sinh: Tòa nhà FPT
+                  Polytechnic, Phố Trịnh Văn Bô, Nam Từ Liêm, Hà Nội<br>
+                  <i class="fa fa-phone-square" style="color: #f7941d;"></i>(024) 8582 0808
+                </p>
+                <div class="footer-xs" style="text-decoration: underline; padding-top: 10px;">Cơ sở Đà Nẵng</div>
+                <p><i class="fa fa-map-marker" style="color: #f7941d;"></i> Văn phòng Tuyển sinh: Số 137 Nguyễn Thị
+                  Thập, Phường Hòa Minh, Quận Liên Chiểu, TP. Đà Nẵng<br>
+                  <i class="fa fa-phone-square" style="color: #f7941d;"></i>(0236) 3710 999
+                </p>
+                <div class="footer-xs" style="text-decoration: underline; padding-top: 10px;">Cơ sở Cần Thơ</div>
+                <p><i class="fa fa-map-marker" style="color: #f7941d;"></i> Văn phòng Tuyển sinh: Số 288, Nguyễn Văn
+                  Linh, phường An Khánh, quận Ninh Kiều, Tp. Cần Thơ<br>
+                  <i class="fa fa-phone-square" style="color: #f7941d;"></i> 0901759222
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="column col-md-4 footer-3">
+          <div class="widgets">
+            <div id="text-8" class="widget widget_text">
+              <div class="textwidget">
+                <div class="footer-xs" style="text-decoration: underline; padding-top: 40px;">Cơ sở Hồ Chí Minh</div>
+                <p><i class="fa fa-map-marker" style="color: #f7941d;"></i>Văn phòng Tuyển sinh: 778/B1 Nguyễn Kiệm,
+                  P.4, Q. Phú Nhuận, TP. Hồ Chí Minh<br>
+                  <i class="fa fa-phone-square" style="color: #f7941d;"></i>028 62523434/0901 660 002
+                </p>
+                <div class="footer-xs" style="text-decoration: underline; margin-top: 20px;">Cơ sở Tây Nguyên</div>
+                <p><i class="fa fa-map-marker" style="color: #f7941d;"></i>Văn phòng Tuyển sinh: Tổ dân phố 8, phường
+                  Tân An, TP. Buôn Mê Thuột, Đắk Lắk<br>
+                  <i class="fa fa-phone-square" style="color: #f7941d;"></i>(0262) 355 5678/0913493777
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-route/angular-route.min.js"></script>
+  <script>
+    var subjectsApiUrl = "http://localhost:3000/subjects";
+    var studentsApiUrl = "http://localhost:3000/students";
+    var app = angular.module('asm1', ['ngRoute']);
+
+    app.run(function ($rootScope, $http) {
+      $rootScope.student = null;
+      if (localStorage.getItem('student') != null) {
+        $rootScope.student = JSON.parse(localStorage.getItem('student'));
+        console.log($rootScope.student.fullname);
+      }
+      else{
+        $rootScope.student = null;
+      }
+      $rootScope.isLoggedIn = false;
+      window.location.href = "#!/";
+
+      $rootScope.logoff = function () {
+        $rootScope.student = null;
+        window.localStorage.removeItem('student');
+        //localStorage.removeItem('loginuser');
+
+        window.location.href = "#!/";
+      };
+    });
+    app.config(function ($routeProvider) {
+      $routeProvider
+        .when("/", {
+          templateUrl: "screens/homepage.html",
+          controller: "HomeController"
+        })
+        .when("/kiem-tra/:subjectId", {
+          templateUrl: "screens/kiem-tra.html",
+          controller: "TestProcessController"
+        })
+        .when("/gioi-thieu", {
+          templateUrl: "screens/gioi-thieu.html",
+
+        })
+        .when("/lien-he", {
+          templateUrl: "screens/contact.html",
+        })
+        .when("/hoi-dap", {
+          templateUrl: "screens/FAQ.html",
+        })
+        .when("/dang-nhap", {
+          templateUrl: "screens/login.html",
+          controller: "LoginController"
+        })
+        .when("/register", {
+          templateUrl: "screens/register.html",
+          controller: "RegisterController"
+        })
+        .when("/forgotpassword", {
+          templateUrl: "screens/forgotpassword.html",
+          controller: "FogotpasswordController"
+        })
+        .when("/changepassword", {
+          templateUrl: "screens/changepassword.html",
+          controller: "ChangePasswordController"
+        })
+        .otherwise({
+          template: "<h2>Đường dẫn không tồn tại</h2>"
+        })
+    });
+  </script>
+  <script src="Page/HomeController.js"></script>
+  <script src="Page/changPassword.js"></script>
+  <script src="Page/TessProsessController.js"></script>
+  <script src="Page/LoginController.js"></script>
+  <script src="Page/RegisterController.js"></script>
+  <script src="Page/forgotpassword.js"></script>
+</body>
+
+</html>

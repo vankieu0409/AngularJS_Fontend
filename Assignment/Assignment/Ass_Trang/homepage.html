@@ -1,0 +1,21 @@
+
+<h3>Danh sách môn học</h3>
+<div class="row">
+  <div class="col-4">
+    <div class="form-group">
+      <label for=""> Tìm Kiếm</label>
+      <input type="text" ng-model="keyword" ng-keyup="changeKeyword()" placeholder=" tìm kiếm theo môn học">
+    </div>
+  </div>
+</div>
+<div class="row">
+    <div class="col-3 mb-3" ng-repeat="sub in subjects">
+        <div class="card" >
+            <img src="lib/lib/images/logos/{{sub.Logo}}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">{{sub.Name}}</h5>
+              <a ng-show="{{student!=null}}" href="#!/kiem-tra/{{sub.Code}}" class="btn btn-primary">Bài kiểm tra</a> <!-- thay "ID" bằng "Code"-->
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,29 @@
+<div style="background-color: #fff;">
+    <h2>Môn Học : </h2>
+    <h4>Số Câu Hỏi : 10 câu</h4>
+    <h4>Thời Gian Làm Bài : 15 Phút </h4>
+    <h4>Thời Gian Còn lại : {{(remainingTime-remainingTime%60)/60}} Phút {{remainingTime%60}} giây </h4>
+    <br>
+    <hr>
+    <h3>Danh sách câu hỏi</h3>
+    <div class="row">
+        <div class="row">
+            <div class="col-8 offset-2 mt-3" ng-repeat="question in questions">
+                <h4>{{question.Text}}</h4>
+                <div class="form-check" ng-repeat="asw in question.Answers">
+                    <input ng-model="radioChange" 
+                            ng-change="chooseAnswer(question.Id, asw.Id)" 
+                            class="form-check-input" type="radio"
+                            name="{{question.Id}}" id="asw_{{asw.Id}}">
+                    <label class="form-check-label" for="asw_{{asw.Id}}">
+                        {{asw.Text}}
+                    </label>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center mt-3 mb-3">
+                <button ng-disabled="isSubmit" class="btn btn-primary" ng-click="submitExercise()">Nộp bài</button>
+            </div>
+        </div>
+    </div>
+    
+</div>
